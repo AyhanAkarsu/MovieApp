@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-F</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body id = "body">
+    <header class="main-header">
+        {% block navbar %}
+        <a href="#" class="logo">MovieApp</a>
+        <nav class="main-nav">
+            <ul class="main-header__items">
+                <li class="main-header__item"> <a href="#">Filmler</a></li>
+                <li class="main-header__item"><a href="#">Diziler</a></li>
+                <li class="main-header__item"><a href="{{ url_for('Uyelik') }}">Üye Ol</a></li>
+                <li class="main-header__item main-header__item-login"><a href="{{ url_for('Login') }}">Giriş Yap</a></li>
+            </ul>
+        </nav>
+        {% endblock %}
+    </header>
+    <main>
+
+    </main>
+    {% block footer %}
+     <footer>
+        <div class="conteiner-f">
+            <div class="row-f">
+                <div class="col-2-f">
+                    <ul class="f-list">
+                        <li><a href="{{ url_for('Hakkımda') }}">Hakkımda</a></li>
+                        <li><a href="{{ url_for('İletisim') }}">İletişim</a></li>
+                        <li>Blog</li>
+                        <li>Forum</li>
+                    </ul>
+                </div>
+                <div class="col-2-f col-2-f-right">
+                    <ul class="f-s-list">
+                        <li><a href="https://www.instagram.com/ayhanakarsu/" class="fab fa-instagram"></a></li>
+                        <li><a href="" class="fab fa-facebook"></a></li>
+                        <li><a href="" class="fab fa-twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#body" class="scroll-fixed">
+        <i class="fas fa-chevron-circle-up"></i>
+    </a>
+    {% endblock %}
+</body>
+</html>
